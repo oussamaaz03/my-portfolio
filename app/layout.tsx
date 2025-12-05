@@ -5,11 +5,11 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Oussama',
+  description: 'Portfolio of Oussama El Azzouzi',
   generator: 'v0.app',
   icons: {
-    icon: '/icon.svg',
+    icon: '/oussama-profile-cropped.jpg',
   },
 }
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased ${GeistSans.variable} ${GeistMono.variable}`}>
         {children}
         <Analytics />
