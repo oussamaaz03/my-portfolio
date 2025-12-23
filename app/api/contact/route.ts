@@ -16,21 +16,15 @@ export async function POST(request: Request) {
       from: "onboarding@resend.dev",
       to: ["oussamaelazzouzi03@gmail.com"],
       subject: `New message from ${name} on your portfolio`,
-      react: (
+      html: `
         <div>
           <h1>New Contact Form Submission</h1>
-          <p>
-            <strong>Name:</strong> {name}
-          </p>
-          <p>
-            <strong>Email:</strong> {email}
-          </p>
-          <p>
-            <strong>Message:</strong>
-          </p>
-          <p>{message}</p>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message}</p>
         </div>
-      ),
+      `,
     })
 
     if (error) {
