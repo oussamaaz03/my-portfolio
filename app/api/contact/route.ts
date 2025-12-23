@@ -1,15 +1,17 @@
-import { NextResponse } from "next/server"
-import React from 'react';
-import { Resend } from "resend"
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json()
+    const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
     }
 
     const { data, error } = await resend.emails.send({
@@ -25,16 +27,22 @@ export async function POST(request: Request) {
           <p>${message}</p>
         </div>
       `,
-    })
+    });
 
     if (error) {
-      console.error("Error sending email:", error)
-      return NextResponse.json({ error: "Failed to send email" }, { status: 500 })
+      console.error("Error sending email:", error);
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 500 }
+      );
     }
 
-    return NextResponse.json({ message: "Email sent successfully" })
+    return NextResponse.json({ message: "Email sent successfully" });
   } catch (error) {
-    console.error("Error processing request:", error)
-    return NextResponse.json({ error: "An unexpected error occurred" }, { status: 500 })
+    console.error("Error processing request:", error);
+    return NextResponse.json(
+      { error: "An unexpected error occurred" },
+      { status: 500 }
+    );
   }
 }
