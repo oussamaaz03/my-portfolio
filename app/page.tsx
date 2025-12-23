@@ -4,7 +4,7 @@ import type React from "react"
 
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { useState, useRef } from "react"
-import { GraduationCap, Briefcase, Code2, Mail, Github, Linkedin, Download, ArrowRight, CheckCircle2, Award, Wrench, Brain } from 'lucide-react'
+import { GraduationCap, Briefcase, Code2, Mail, Github, Linkedin, Download, ArrowRight, CheckCircle2, Award, Wrench, Brain, Eye } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -190,7 +190,7 @@ export default function Portfolio() {
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" className="gap-2 bg-transparent" asChild>
-              <a href="/cv-oussama-el-azzouzi.pdf" download>
+              <a href="/CV-OUSSAMA-EL-AZZOUZI.pdf" download>
                 my resume
                 <Download className="h-4 w-4" />
               </a>
@@ -664,47 +664,86 @@ export default function Portfolio() {
           </div>
           <div className="space-y-6">
             <Card className="border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                  <Award className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="mb-2 text-lg font-semibold text-foreground leading-tight">
-                    Exploratory Data Analysis (EDA) with Python
-                  </h3>
-                  <p className="text-sm text-muted-foreground">Coursera</p>
-                </div>
-              </div>
-            </Card>
-            <Card className="border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                  <Award className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="mb-2 text-lg font-semibold text-foreground leading-tight">
-                    Apprentissage automatique supervisé : Régression
-                  </h3>
-                  <p className="text-sm text-muted-foreground">Coursera</p>
-                </div>
-              </div>
-            </Card>
-            <Card className="border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-                  <Award className="h-6 w-6 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
-                    <h3 className="text-lg font-semibold text-foreground leading-tight">
-                      Apprentissage profond et apprentissage par renforcement
-                    </h3>
-                    <span className="inline-block rounded-full bg-yellow-200/20 text-yellow-600 px-3 py-1 text-xs font-medium w-fit">
-                      En cours
-                    </span>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                    <Award className="h-6 w-6 text-primary" />
                   </div>
-                  <p className="text-sm text-muted-foreground">Coursera</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="mb-2 text-lg font-semibold text-foreground leading-tight">
+                      Exploratory Data Analysis (EDA) with Python
+                    </h3>
+                    <p className="text-sm text-muted-foreground">Coursera</p>
+                  </div>
                 </div>
+                <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                  <a href="/Coursera_EDA.pdf" target="_blank" rel="noopener noreferrer">
+                    <Eye className="h-4 w-4" />
+                    View
+                  </a>
+                </Button>
+              </div>
+            </Card>
+            <Card className="border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="mb-2 text-lg font-semibold text-foreground leading-tight">
+                      Apprentissage automatique supervisé : Régression
+                    </h3>
+                    <p className="text-sm text-muted-foreground">Coursera</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                  <a href="/Supervised-Machine-Learning-Regression.pdf" target="_blank" rel="noopener noreferrer">
+                    <Eye className="h-4 w-4" />
+                    View
+                  </a>
+                </Button>
+              </div>
+            </Card>
+            <Card className="border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                      <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        Apprentissage profond et apprentissage par renforcement
+                      </h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Coursera</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                  <a href="/Deep-Learning-and-Reinforcement-Learning.pdf" target="_blank" rel="noopener noreferrer">
+                    <Eye className="h-4 w-4" />
+                    View
+                  </a>
+                </Button>
+              </div>
+            </Card>
+            <Card className="border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4 flex-1 min-w-0">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                    <Award className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-semibold text-foreground leading-tight mb-2">
+                      Apprentissage automatique supervisé : Classification
+                    </h3>
+                    <p className="text-sm text-muted-foreground">Coursera</p>
+                  </div>
+                </div>
+                <span className="inline-block rounded-full bg-yellow-200/20 text-yellow-600 px-3 py-1 text-xs font-medium w-fit shrink-0">
+                  En cours
+                </span>
               </div>
             </Card>
           </div>
