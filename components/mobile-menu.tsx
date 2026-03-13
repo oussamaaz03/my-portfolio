@@ -13,7 +13,11 @@ const navLinks = [
   { href: "#work", label: "Projects" },
 ]
 
-export function MobileMenu() {
+type MobileMenuProps = {
+  activeSection?: string
+}
+
+export function MobileMenu({ activeSection }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const scrollToSection = (id: string) => {
@@ -46,7 +50,7 @@ export function MobileMenu() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-black/50"
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
             <motion.div
@@ -54,14 +58,19 @@ export function MobileMenu() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 h-full w-80 z-50 bg-background border-l border-border shadow-lg"
+              className="fixed top-0 right-0 z-50 h-full w-80 border-l border-border bg-background/95 shadow-xl backdrop-blur-xl"
             >
               <div className="flex flex-col items-center space-y-6 p-8 pt-24">
+                <div className="mb-2 text-xs uppercase tracking-[0.2em] text-primary">Navigation</div>
                 {navLinks.map(({ href, label }) => (
                   <a
                     key={href}
                     href={href}
-                    className="text-2xl font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className={`w-full rounded-xl px-4 py-3 text-center text-2xl font-medium transition-all ${
+                      activeSection === href.replace("#", "")
+                        ? "bg-primary/10 text-foreground"
+                        : "text-muted-foreground hover:bg-primary/5 hover:text-foreground"
+                    }`}
                     onClick={(e) => {
                       e.preventDefault()
                       scrollToSection(href)
@@ -72,7 +81,7 @@ export function MobileMenu() {
                 ))}
                 <Button
                   size="lg"
-                  className="w-full mt-4"
+                  className="mt-4 w-full"
                   onClick={() => {
                     scrollToSection("#contact")
                     setIsOpen(false)
