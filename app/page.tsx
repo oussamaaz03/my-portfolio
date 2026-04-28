@@ -763,23 +763,23 @@ export default function Portfolio() {
               <div className="flex flex-col gap-4">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground">AI & Software Engineering Intern</h3>
-                    <p className="mt-1 font-medium text-primary">AI HUB • Rabat, Morocco</p>
+                    <h3 className="text-xl font-semibold text-foreground">AI Engineer</h3>
+                    <p className="mt-1 font-medium text-primary">Aquadviser • Kenitra, Maroc</p>
                   </div>
                   <span className="inline-block rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-foreground w-fit">
-                    July 2025 – September 2025
+                    Mars 2026 – Avril 2026
                   </span>
                 </div>
 
                 <div className="grid gap-3">
                   <div className="rounded-xl border border-border bg-background/70 p-4">
-                    <p className="text-sm text-muted-foreground"><strong className="text-foreground">Intelligent Chatbot Development (Agentic AI):</strong> Design and implementation of a conversational agent using LangGraph for managing complex dialogue cycles and multi-step reasoning.</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-foreground">Modélisation ML :</strong> Développement de modèles de Machine Learning pour simuler le comportement des logiciels de conception de stations de dessalement d’eau (ex. Toray).</p>
                   </div>
                   <div className="rounded-xl border border-border bg-background/70 p-4">
-                    <p className="text-sm text-muted-foreground"><strong className="text-foreground">LLM Orchestration:</strong> Using LangChain for language model integration and RAG (Retrieval-Augmented Generation) workflow management.</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-foreground">Optimisation :</strong> Implémentation d’algorithmes d’optimisation pour identifier la configuration de design optimale parmi de centaines de scénarios de tests.</p>
                   </div>
                   <div className="rounded-xl border border-border bg-background/70 p-4">
-                    <p className="text-sm text-muted-foreground"><strong className="text-foreground">Interface & Fullstack:</strong> User interface development (Dashboard & Settings & Contact) with React.</p>
+                    <p className="text-sm text-muted-foreground"><strong className="text-foreground">Interface Web :</strong> Conception et intégration d’une interface web interactive permettant aux utilisateurs de visualiser les résultats et comparer les scénarios.</p>
                   </div>
                 </div>
               </div>
