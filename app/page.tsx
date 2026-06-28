@@ -799,7 +799,7 @@ export default function Portfolio() {
                       <p className="mt-1 font-medium text-primary">Aquadviser • Kenitra, Maroc</p>
                     </div>
                     <span className="inline-block rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-foreground w-fit">
-                      Mars 2026 – Avril 2026
+                      Mars 2026 – Juillet 2026
                     </span>
                   </div>
 
